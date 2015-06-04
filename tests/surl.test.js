@@ -9,7 +9,17 @@ describe('SUrl', function(){
         var surl = null
         it('should return the decoded string.', function(){
             surl = new SUrl();
-            assert.equal('23', surl.decode('ab'));
+            assert.equal(surl.decode('b'), 1);
+        })
+
+        it('should return -1 for an empty string.', function(){
+            surl = new SUrl();
+            assert.equal(surl.decode(''), -1);
+        })
+
+        it('should return 63 for bb.', function(){
+            surl = new SUrl();
+            assert.equal(surl.decode('bb'), 63);
         })
     })
 })
