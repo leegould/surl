@@ -5,8 +5,10 @@ var assert = require("assert")
 var SUrl = require("../lib/surl");
 
 describe('SUrl', function(){
+    var surl = null
+
     describe('#decode()', function(){
-        var surl = null
+
         it('should return the decoded string.', function(){
             surl = new SUrl();
             assert.equal(surl.decode('b'), 1);
@@ -22,4 +24,20 @@ describe('SUrl', function(){
             assert.equal(surl.decode('bb'), 63);
         })
     })
+
+    describe('#encode()', function(){
+
+        it('should return the encoded id.', function(){
+            surl = new SUrl();
+            assert.equal(surl.encode('1'), 'b');
+        })
+
+        it('should return the encoded large id.', function(){
+            surl = new SUrl();
+            assert.equal(surl.encode('125'), 'bc');
+        })
+    })
 })
+
+
+
