@@ -32,6 +32,11 @@ describe('SUrl', function(){
             assert.equal(surl.encode('1'), 'b');
         })
 
+        it('should return the a for a zero id.', function(){
+            surl = new SUrl();
+            assert.equal(surl.encode('a'), '');
+        })
+
         it('should return the encoded large id.', function(){
             surl = new SUrl();
             assert.equal(surl.encode('125'), 'bc');
