@@ -8,15 +8,15 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/surl/all', function(req, res, next) {
-  models.SUrl.findAll({
-    include: [ models.Task ]
-  }).then(function(users) {
-    res.render('index', {
-      title: 'Express',
-      users: users
-    });
-  });
-});
+//router.get('/surl/all', function(req, res, next) {
+//  models.SUrl.findAll({
+//    include: [ models.SUrl ]
+//  }).then(function(Surl) {
+//    res.render('index', {
+//      title: 'Express',
+//      surls: surls
+//    });
+//  });
+//});
 
 module.exports = router;
