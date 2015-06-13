@@ -3,18 +3,19 @@ class SUrl
   BASE = 62
   ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 #  models = require '../models'
-#  express = require 'express'
+  models = require '../models/index'
+  ShortUrl = models.ShortUrl
 
   constructor: () ->
 
   create: (str) ->
 
-#    models..build()
-#    ashorturl = ShortUrl.build({
-#      Url: str
-#    })
-#
-#    ashorturl.save()
+    mysurl = ShortUrl.build({
+      Url: str
+    })
+
+    mysurl.save()
+
 
 #    surl = sequelize.define('surl', {
 #      id: { type: Sequelize.INTEGER },
