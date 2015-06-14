@@ -43,6 +43,8 @@ describe('SUrl', function(){
         })
     })
 
+    // http://www.eguneys.com/blog/2014/09/17/building-a-voting-app-rest-api-slash-w-sequelize
+
     describe('#create()', function(){
         it('should accept a string and return an encoded string of the id.', function(){
             surl = new SUrl();

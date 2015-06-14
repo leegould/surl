@@ -59,8 +59,9 @@ app.use(function(err, req, res, next) {
 
 // http://sequelize.readthedocs.org/en/1.7.0/articles/getting-started/
 var Sequelize = require('sequelize')
-    , sequelize = new Sequelize('surl_db', 'username', 'password', {
-      dialect: "sqlite", // or 'mysql', 'postgres', 'mariadb'
+    , sequelize = new Sequelize('shorturl-db', null, null, {
+      dialect: "sqlite",
+      storage: './db/development.sqlite',
       port:    3306, // or 5432 (for postgres)
     });
 
@@ -71,10 +72,5 @@ sequelize
     }, function (err) {
       console.log('Unable to connect to the database:', err);
     });
-
-//sequelize.sync()
-//    .success(function(){
-//        console.log('synced')
-//    });
 
 module.exports = app;
