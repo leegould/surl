@@ -10,13 +10,21 @@ class SUrl
 
   create: (str) ->
 
-    mysurl = ShortUrl.build({
-      Url: str
-    })
+#    mysurl = ShortUrl.build({
+#      Url: str
+#    })
 
-    mysurl.save()
+    models.ShortUrl.findOrCreate({where: {Url: str}})
+          .spread((shorturl, created) ->
+            console.log(shorturl.get({
+              plain: true
+            }))
+            console.log(created)
+          )
 
+#    mysurl.save()
 
+# http://stackoverflow.com/questions/28003772/how-can-i-set-up-a-sequelize-singleton-with-coffeescript
 #    surl = sequelize.define('surl', {
 #      id: { type: Sequelize.INTEGER },
 #      url: { type: Sequelize.STRING }

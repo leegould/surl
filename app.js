@@ -72,4 +72,9 @@ sequelize
       console.log('Unable to connect to the database:', err);
     });
 
+//sequelize.sync()
+//    .success(function(){
+//        console.log('synced')
+//    });
+
 module.exports = app;

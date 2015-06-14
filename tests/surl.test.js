@@ -46,7 +46,7 @@ describe('SUrl', function(){
     describe('#create()', function(){
         it('should accept a string and return an encoded string of the id.', function(){
             surl = new SUrl();
-            assert.equal(surl.create('blah'),'a');
+            assert.equal(surl.create('blah'), 'a');
         })
     })
 })
