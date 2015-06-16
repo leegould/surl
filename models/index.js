@@ -25,6 +25,7 @@ Object.keys(db).forEach(function(modelName) {
   }
 });
 
+//console.log('syncing db');
 sequelize.sync();
 
 db.sequelize = sequelize;

@@ -5,7 +5,8 @@
     "database": "database_development",
     "host": "localhost",
     "dialect": "sqlite",
-    "storage": "./db/db_development.sqlite"
+    "storage": "./db/db_development.sqlite",
+    "omitNull": true
   },
   "test": {
     "username": null,
@@ -13,7 +14,8 @@
     "database": "database_test",
     "host": "localhost",
     "dialect": "sqlite",
-    "storage": "./db/db_test.sqlite"
+    "storage": "./db/db_test.sqlite",
+    "omitNull": true
   },
   "production": {
     "username": null,
@@ -21,6 +23,7 @@
     "database": "database_production",
     "host": "localhost",
     "dialect": "sqlite",
-    "storage": "./db/db_production.sqlite"
+    "storage": "./db/db_production.sqlite",
+    "omitNull": true
   }
 }

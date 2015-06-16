@@ -63,6 +63,7 @@ var Sequelize = require('sequelize')
       dialect: "sqlite",
       storage: './db/development.sqlite',
       port:    3306, // or 5432 (for postgres)
+      omitNull: true
     });
 
 sequelize

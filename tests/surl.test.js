@@ -1,8 +1,10 @@
 /**
  * Created by lgould12 on 03/06/2015.
  */
-var assert = require("assert")
+var assert = require("assert");
 var SUrl = require("../lib/surl");
+
+var models = require('../models/index.js');
 
 describe('SUrl', function(){
     var surl = null
