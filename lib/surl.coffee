@@ -10,24 +10,21 @@ class SUrl
 
   create: (str) ->
 
-#    newsurl = ShortUrl
-#      .build
-#        url: str
-#
-#    newsurl.save()
-#      .error (err) ->
-#        console.log err
-#        undefined
-#      .success () ->
-#        console.log 'Success!'
-#        undefined
+    newsurl = ShortUrl
+      .build
+        url: str
 
-    ShortUrl
+    newsurl.save()
+
+    console.log('newsurl.id ' + newsurl.id)
+
+    item = ShortUrl
     .findOrCreate
       where: { url: str }
 
-    .then (i) ->
-      console.log 'Testing:' + i
+    console.log(item)
+    console.log('ITEMID: ' + item.id)
+
 #    .success (shorturl, created) ->
 #      console.log shorturl.values
 #      console.log created
